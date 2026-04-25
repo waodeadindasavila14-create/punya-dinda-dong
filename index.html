@@ -91,6 +91,57 @@
     </div>
 </div>
 
+<div style="text-align: center; margin-top: 20px; font-family: 'Poppins', sans-serif;">
+    <button id="musicBtn" onclick="toggleMusic()" style="background: #5d4037; color: white; border: none; padding: 10px 25px; border-radius: 20px; cursor: pointer; transition: 0.3s;">
+        Play Music 🎵
+    </button>
+
+    <div style="display:none;">
+        <iframe id="youtube-player" width="1" height="1" src="" frameborder="0" allow="autoplay"></iframe>
+    </div>
+</div>
+
+<div style="text-align: center; margin-top: 20px; font-family: 'Poppins', sans-serif; background: #1a1a1a; padding: 20px; border-radius: 15px;">
+    <p style="color: #8d6e63; font-size: 14px; margin-bottom: 15px;">🎵 GIO GEVAGAR PLAYLIST</p>
+    
+    <button onclick="playSong('re7kJ7HC9Oc', 'Everything Goes On')" style="background: #5d4037; color: white; border: none; padding: 8px 15px; border-radius: 10px; cursor: pointer; margin: 5px;">
+        Everything Goes On 🎶
+    </button>
+
+    <button onclick="playSong('ZJCLEP3Ye-E', 'The song hasn\'t even been finished')" style="background: #5d4037; color: white; border: none; padding: 8px 15px; border-radius: 10px; cursor: pointer; margin: 5px;">
+        The song hasn't finished 🎶
+    </button>
+
+    <br><br>
+
+    <button onclick="stopMusic()" style="background: #cc0000; color: white; border: none; padding: 5px 20px; border-radius: 5px; cursor: pointer; font-size: 12px;">
+        Stop Music ⏸️
+    </button>
+
+    <p id="status" style="color: #555; font-size: 12px; margin-top: 10px;">Status: Off</p>
+
+    <div style="display:none;">
+        <iframe id="youtube-player" width="1" height="1" src="" frameborder="0" allow="autoplay"></iframe>
+    </div>
+</div>
+
+<script>
+    var player = document.getElementById('youtube-player');
+    var statusText = document.getElementById('status');
+
+    function playSong(videoId, title) {
+        player.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+        statusText.innerHTML = "Status: Memutar " + title;
+        statusText.style.color = "#8d6e63";
+    }
+
+    function stopMusic() {
+        player.src = "";
+        statusText.innerHTML = "Status: Off";
+        statusText.style.color = "#555";
+    }
+</script>
+</script>
 <script>
     window.onscroll = function() {
         const nav = document.getElementById('mainNav');
