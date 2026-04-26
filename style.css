@@ -190,3 +190,51 @@ footer { text-align: center; padding: 40px; background: var(--darker); border-to
         height: 180px; /* Pendekin dikit fotonya */
     }
 }
+
+/* --- ANIMASI PIRINGAN HITAM --- */
+
+/* 1. Perintah untuk berputar 360 derajat */
+@keyframes spin {
+    from { 
+        transform: rotate(0deg); 
+    }
+    to { 
+        transform: rotate(360deg); 
+    }
+}
+
+/* 2. Class yang akan dipasang lewat JavaScript tadi */
+.spinning {
+    animation: spin 3s linear infinite;
+}
+
+/* 1. Tambahkan overflow: hidden agar elemen tidak bocor keluar modal */
+.modal-content {
+    /* ... kode yang sudah ada ... */
+    overflow: hidden; 
+    position: relative;
+    text-align: center;
+}
+
+/* 2. Gaya untuk tombol Instagram "Baku Pukul" */
+.ig-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    color: white;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+}
+
+.ig-btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
