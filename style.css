@@ -238,3 +238,34 @@ footer { text-align: center; padding: 40px; background: var(--darker); border-to
     transform: scale(1.05);
     filter: brightness(1.1);
 }
+
+.gallery-grid img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(187, 134, 252, 0.4);
+    z-index: 2;
+}
+
+.logo span {
+    color: #bb86fc;
+    text-shadow: 0 0 10px #bb86fc, 0 0 20px #bb86fc;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { opacity: 0.8; }
+    to { opacity: 1; text-shadow: 0 0 20px #bb86fc, 0 0 30px #bb86fc; }
+}
+
+.profile-img {
+    width: 150px; /* Atur ukurannya sesuai mau kamu */
+    height: 150px;
+    border-radius: 50%; /* Biar bulat sempurna */
+    object-fit: cover; /* JURUS BIAR NGGAK KEPOTONG/GEPENG */
+    object-position: center; /* Fokus di tengah foto */
+    border: 3px solid #bb86fc;
+    margin-bottom: 15px;
+}
