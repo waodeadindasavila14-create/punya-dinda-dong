@@ -331,70 +331,38 @@ body {
 /* --- KHUSUS TAMPILAN HP (RESPONSIF) --- */
 /* --- TAMPILAN LAPTOP (DEFAULT) --- */
 /* --- TAMPILAN LAPTOP --- */
+/* --- RESET NAVBAR BIAR GAK TABRAKAN --- */
 .navbar-global {
     position: fixed;
     top: 0; left: 0; width: 100%;
     z-index: 99999;
-    background: rgba(26, 26, 26, 0.95);
-    padding: 10px 5%; 
+    background: rgba(26, 26, 26, 0.95); /* Biar navbarnya kelihatan jelas */
+    padding: 10px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border: none !important;
 }
 
-.logo-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+.logo-wrapper { display: flex; align-items: center; gap: 10px; cursor: pointer; }
 
-.nav-logo-img {
-    width: 50px; /* Ukuran laptop */
-    height: auto;
-}
+/* UKURAN LAPTOP */
+.nav-logo-img { width: 50px; height: auto; }
+.logo-text { margin: 0; font-size: 22px; color: white; font-weight: bold; }
+.logo-text span { color: #bb86fc; text-shadow: 0 0 10px #bb86fc; }
+.nav-links { display: flex; list-style: none; gap: 20px; margin: 0; padding: 0; }
+.nav-links a { color: white; text-decoration: none; font-weight: bold; font-size: 15px; }
 
-.logo-text {
-    margin: 0;
-    font-size: 24px;
-    color: white;
-}
-
-.logo-text span {
-    color: #bb86fc;
-    text-shadow: 0 0 10px #bb86fc;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* --- TAMPILAN HP (DIGABUNG BIAR RAPI) --- */
+/* --- KHUSUS TAMPILAN HP (BIAR GAK MELEDAK) --- */
 @media (max-width: 768px) {
-    .nav-logo-img {
-        width: 40px; 
-    }
-    .logo-text {
-        font-size: 18px; 
-    }
-    .nav-links {
-        gap: 12px;
-    }
-    .nav-links a {
-        font-size: 13px;
-    }
-    .playlist-section {
-        width: 95% !important;
-        padding: 15px !important;
-    }
+    .navbar-global { padding: 8px 4%; }
+    .nav-logo-img { width: 35px; } /* Logo jadi kecil di HP */
+    .logo-text { font-size: 16px; } /* Teks jadi pas di HP */
+    .nav-links { gap: 12px; }
+    .nav-links a { font-size: 13px; }
+    
+    /* Perbaikan Playlist */
+    .playlist-section { width: 95% !important; padding: 10px !important; }
 }
 footer {
     padding: 20px 0; /* Kasih jarak atas bawah 20px */
