@@ -328,13 +328,74 @@ body {
     to { transform: scale(1); opacity: 1; }
 }
 
-/* Responsif (Buat HP) */
-@media (max-width: 768px) {
-    .gallery-grid { column-count: 2; }
-    .hero h1 { font-size: 2.5rem; }
-    .main-btn { padding: 10px 25px; font-size: 1rem; }
+/* --- KHUSUS TAMPILAN HP (RESPONSIF) --- */
+/* --- TAMPILAN LAPTOP (DEFAULT) --- */
+/* --- TAMPILAN LAPTOP --- */
+.navbar-global {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    z-index: 99999;
+    background: rgba(26, 26, 26, 0.95);
+    padding: 10px 5%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none !important;
 }
 
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo-img {
+    width: 50px; /* Ukuran laptop */
+    height: auto;
+}
+
+.logo-text {
+    margin: 0;
+    font-size: 24px;
+    color: white;
+}
+
+.logo-text span {
+    color: #bb86fc;
+    text-shadow: 0 0 10px #bb86fc;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- TAMPILAN HP (DIGABUNG BIAR RAPI) --- */
+@media (max-width: 768px) {
+    .nav-logo-img {
+        width: 40px; 
+    }
+    .logo-text {
+        font-size: 18px; 
+    }
+    .nav-links {
+        gap: 12px;
+    }
+    .nav-links a {
+        font-size: 13px;
+    }
+    .playlist-section {
+        width: 95% !important;
+        padding: 15px !important;
+    }
+}
 footer {
     padding: 20px 0; /* Kasih jarak atas bawah 20px */
     margin-top: 30px; /* Kasih jarak dari konten di atasnya */

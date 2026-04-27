@@ -9,26 +9,17 @@
 </head>
 <body>
 
-<nav style="position: fixed; top: 0; left: 0; 
-width: 100%; 
-z-index: 99999; 
-background: transparent;
-padding: 15px 5%; 
-display: flex; 
-justify-content: space-between; 
-align-items: center;">
-    
-<div class="logo-wrapper" onclick="openLogoPreview()">
-    <img src="LOGO_GIO.png" alt="Logo" style="width: 70px !important; height: auto;">
-    <h1 class="logo" 
-    style="margin-top: 20px ; font-size: 32px; color: white;">
-        GIO.<span style="color: #bb86fc; text-shadow: 0 0 10px #bb86fc;">GEVAGAR</span>
-    </h1>
-</div>
+<nav class="navbar-global">
+    <div class="logo-wrapper" onclick="openLogoPreview()">
+        <img src="LOGO_GIO.png" alt="Logo" class="nav-logo-img">
+        <h1 class="logo-text">
+            GIO.<span>GEVAGAR</span>
+        </h1>
+    </div>
 
-    <ul style="display: flex; list-style: none; gap: 25px; margin: 0; padding: 30px 5% 30px 5%;">
-        <li><a href="index.html" style="color: white; text-decoration: none; font-weight: bold; font-size: 20px;">Home</a></li>
-        <li><a href="#main-content" style="color: white; text-decoration: none; font-weight: bold; font-size: 20px;">Koleksi</a></li>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#main-content">Koleksi</a></li>
     </ul>
 </nav>
 
