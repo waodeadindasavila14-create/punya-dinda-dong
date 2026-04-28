@@ -83,14 +83,14 @@ body {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 2.2rem;
     font-weight: 800;
     margin-bottom: 20px;
     text-shadow: 0 0 15px rgba(255,255,255,0.5);
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 30px;
     max-width: 600px;
 }
@@ -195,7 +195,7 @@ body {
 }
 
 .gallery-grid {
-    column-count: 4; /* 4 Kolom di PC */
+    column-count: 3; /* 4 Kolom di PC */
     column-gap: 20px;
 }
 
@@ -381,7 +381,26 @@ body {
     
     .navbar-global { padding: 10px 3%; }
     
-    .playlist-section { width: 95% !important; padding: 10px !important; }
+    .playlist-section { width: 95% !important; 
+        padding: 15px !important; 
+        margin: 20px auto !important; 
+    }
+    .playlist-section button {
+        width: 100% !important;
+        max-width: 200px;
+        font-size: 14px !important;
+        padding: 10px !important;
+    }
+    marquee {
+        font-size: 12px;
+    }
+
+    @media (max-width: 1024px) {
+    .gallery-grid {
+        column-count: 3;
+    }
+}
+
 footer{
     padding: 20px 0; /* Kasih jarak atas bawah 20px */
     margin-top: 30px; /* Kasih jarak dari konten di atasnya */
@@ -413,6 +432,7 @@ nav a {
 
 /* SESUDAH */
 nav {
+    position: fixed !important;
     top: 0 !important;
     margin-top: 0 !important;
     border-bottom: none !important;
