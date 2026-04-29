@@ -82,18 +82,6 @@ body {
     padding: 20px;
 }
 
-.hero h1 {
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    text-shadow: 0 0 15px rgba(255,255,255,0.5);
-}
-
-.hero p {
-    font-size: 1rem;
-    margin-bottom: 30px;
-    max-width: 600px;
-}
 
 /* FIX TOMBOL AYO KENALAN (Gede, Ungu, Neon, Bisa Diklik) */
 .main-btn {
@@ -195,7 +183,7 @@ body {
 }
 
 .gallery-grid {
-    column-count: 3; /* 4 Kolom di PC */
+    column-count: 4; /* 4 Kolom di PC */
     column-gap: 20px;
 }
 
@@ -359,28 +347,28 @@ body {
 
 /* --- KHUSUS TAMPILAN HP (BIAR GAK BERANTAKAN) --- */
 
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
     .navbar-global { 
-        padding: 8px 4%; 
-    }
+        padding: 8px 4%; }
     .nav-logo-img { 
-        width: 32px !important;
-    } 
+        width: 32px !important;} 
     .logo-text { 
-        font-size: 16px!important; 
-    } /* Teks nama jadi mungil & rapi */
-    
+        font-size: 16px!important; } 
     .nav-links { 
-        gap: 12px !important;
-    } /* Jarak menu dirapatkan biar gak turun ke bawah */
-    
+        gap: 12px !important;}
     .nav-links a { 
-        font-size: 12px !important
-    } 
-}/* Tulisan Home/Koleksi jadi pas */
-    
-    .navbar-global { padding: 10px 3%; }
-    
+        font-size: 12px !important} 
+.hero h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
     .playlist-section { width: 95% !important; 
         padding: 15px !important; 
         margin: 20px auto !important; 
@@ -391,15 +379,12 @@ body {
         font-size: 14px !important;
         padding: 10px !important;
     }
+}
+    .navbar-global { padding: 10px 3%; }
+
     marquee {
         font-size: 12px;
     }
-
-    @media (max-width: 1024px) {
-    .gallery-grid {
-        column-count: 3;
-    }
-}
 
 footer{
     padding: 20px 0; /* Kasih jarak atas bawah 20px */
