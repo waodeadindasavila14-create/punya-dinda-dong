@@ -41,7 +41,7 @@ body {
     text-shadow: 
         0 0 5px #bb86fc, 
         0 0 10px #bb86fc, 
-        0 0 20px #bb86fc; /* Semakin banyak lapisannya, semakin terang nyalanya */
+        0 0 20px #bb86fc;
     transition: 0.3s;
 }
 
@@ -51,7 +51,7 @@ body {
         0 0 10px #bb86fc, 
         0 0 20px #bb86fc, 
         0 0 40px #bb86fc;
-    color: white; /* Opsional: berubah jadi putih biar efek neonnya makin dapet */
+    color: white;
 }
 
 .hero, .main-content {
@@ -60,8 +60,8 @@ body {
 }
 
 .logo-wrapper:hover {
-    transform: none !important; /* Matiin efek gerak maju */
-    filter: drop-shadow(0 0 5px #bb86fc); /* Kasih cahaya tipis aja */
+    transform: none !important;
+    filter: drop-shadow(0 0 5px #bb86fc);
 }
 
 .logo {
@@ -82,6 +82,18 @@ body {
     padding: 20px;
 }
 
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
 
 /* FIX TOMBOL AYO KENALAN (Gede, Ungu, Neon, Bisa Diklik) */
 .main-btn {
@@ -94,27 +106,27 @@ body {
     border-radius: 50px;
     cursor: pointer;
     transition: 0.3s ease;
-    box-shadow: 0 0 10px rgba(187, 134, 252, 0.3); /* Neon halus */
+    box-shadow: 0 0 10px rgba(187, 134, 252, 0.3);
 }
 
 .main-btn:hover {
     background-color: var(--primary-color);
     color: #000;
-    box-shadow: 0 0 25px var(--primary-color); /* Neon pas hover */
-    transform: translateY(-3px); /* Tombol naik dikit */
+    box-shadow: 0 0 25px var(--primary-color);
+    transform: translateY(-3px);
 }
 
 /* Sosmed Icon di Hero */
 .sosmed-container {
     display: flex;
     justify-content: center;
-    gap: 35px;        /* Jarak antar ikon juga ditambah biar lega */
-    margin: 30px 0;   /* Jarak atas bawah kontainer */
+    gap: 35px;
+    margin: 30px 0;
 }
 
 .sos-icon {
     color: #bb86fc; 
-    font-size: 2.5rem;   /* Ukuran diperbesar (sesuaikan antara 2rem - 3rem) */
+    font-size: 2.5rem;
     transition: 0.4s ease;
     text-decoration: none;
     display: inline-block;
@@ -122,7 +134,7 @@ body {
 
 .sos-icon:hover {
     color: white;
-    transform: scale(1.3) translateY(-5px); /* Nge-zoom + naik dikit */
+    transform: scale(1.3) translateY(-5px);
     filter: drop-shadow(0 0 15px #bb86fc);
 }
 /* --- GALERI SECTION (Fix Galeri di Tengah) --- */
@@ -130,7 +142,7 @@ body {
     padding: 100px 0;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Konten rata tengah */
+    align-items: center;
 }
 
 .section-header h2 {
@@ -163,7 +175,6 @@ body {
     color: var(--primary-color);
 }
 
-/* Class untuk tombol yang aktif */
 .tab-btn.active {
     background-color: var(--primary-color);
     color: #000;
@@ -173,17 +184,17 @@ body {
 
 /* FIX GALERI (Column Count, Di Tengah, Animasi) */
 .tab-content {
-    display: none; /* Sembunyikan default */
+    display: none;
     width: 90%;
     max-width: 1200px;
 }
 
 .tab-content.active {
-    display: block; /* Tampilkan kalau aktif */
+    display: block;
 }
 
 .gallery-grid {
-    column-count: 4; /* 4 Kolom di PC */
+    column-count: 4;
     column-gap: 20px;
 }
 
@@ -192,108 +203,95 @@ body {
     width: 100%;
     margin-bottom: 20px;
     border-radius: 15px;
-    transition: 0.4s ease; /* Durasi animasi */
+    transition: 0.4s ease;
     cursor: pointer;
     border: 2px solid transparent;
 }
 
 .gallery-grid img:hover {
-    transform: scale(1.05) translateY(-5px); /* Nge-zoom & naik dikit */
+    transform: scale(1.05) translateY(-5px);
     border-color: var(--primary-color);
     box-shadow: 0 10px 25px rgba(187, 134, 252, 0.4);
 }
 
 /* --- CSS MODAL BARU (PATEN & ANTI KOCAK) --- */
 .modal {
-    display: none; /* Awalnya sembunyi */
+    display: none;
     position: fixed;
-    z-index: 10000; /* KUNCI: Harus paling besar biar di depan SEMUA konten */
+    z-index: 10000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.95); /* Latar belakang super gelap */
-    backdrop-filter: blur(10px); /* Efek blur estetik di background */
-    
-    /* KUNCI: Tengahin kotak modal secara sempurna */
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
     align-items: center;
     justify-content: center;
 }
 
-/* Kotak Konten Modal (Wadah Profil Adinda) */
 .modal-content {
-    background-color: #1a1a1a; /* Warna gelap nav */
-    padding: 40px 30px; /* Jarak dalem kotak biar lega */
-    border: 2px solid #bb86fc; /* Garis ungu neo */
-    border-radius: 20px; /* Sudut tumpul */
+    background-color: #1a1a1a;
+    padding: 40px 30px;
+    border: 2px solid #bb86fc;
+    border-radius: 20px;
     width: 90%;
-    max-width: 450px; /* Lebar maksimal kotak */
-    position: relative; /* KUNCI: Biar X nempel di kotak ini */
+    max-width: 450px;
+    position: relative;
     box-shadow: 0 0 30px rgba(187, 134, 252, 0.3);
-    animation: zoomIn 0.3s ease; /* Aura ungu tipis */
-    
-    /* KUNCI: Semua teks & foto di dalemnya rata tengah otomatis */
+    animation: zoomIn 0.3s ease;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Tombol X (Close) - Biar anteng di pojok kotak */
 .close-modal {
     position: absolute;
     right: 20px; 
     top: 15px;
-    color: #bb86fc; /* Warna ungu standby */
+    color: #bb86fc;
     font-size: 32px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s ease;
-    z-index: 10001; /* Di depan modal-content */
+    z-index: 10001;
     line-height: 1;;
 }
 
 .close-modal:hover {
-    color: white; /* Berubah putih pas disentuh */
-    transform: scale(1.1); /* Besar dikit biar responsif */
+    color: white;
+    transform: scale(1.1);
 }
 
-/* --- STYLE ISI MODAL (ADINDA) --- */
-
-/* Foto Profil (Biar Bulat & Nyala) */
 .profile-img {
-    width: 140px; /* Ukuran pas */
+    width: 140px;
     height: 140px;
-    border-radius: 50%; /* Bulat sempurna */
-    border: 4px solid #bb86fc; /* Garis ungu neo */
-    object-fit: cover; /* Foto gak gepeng */
-    margin-bottom: 20px; /* Jarak ke tulisan nama */
-    box-shadow: 0 0 15px rgba(187, 134, 252, 0.5); /* Foto ikutan nyala */
+    border-radius: 50%;
+    border: 4px solid #bb86fc;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(187, 134, 252, 0.5);
 }
 
-/* Teks Nama "Adinda Savila" */
 .modal-content h3 {
-    color: white; /* Nama tetap putih */
+    color: white;
     margin-bottom: 8px;
     font-size: 1.6rem;
     font-family: sans-serif;
     font-weight: bold;
 }
 
-/* Teks Jurusan */
 .modal-content p {
-    color: #ccc; /* Abu-abu tipis */
+    color: #ccc;
     font-size: 0.95rem;
-    margin-bottom: 25px; /* Jarak ke tombol IG */
+    margin-bottom: 25px;
     font-family: sans-serif;
     line-height: 1.4;
 }
 
-/* Tombol IG (Baku Pukul) - Biar Nyala Neon */
-/* Keadaan Normal: Tombol Ungu, Tulisan Hitam */
 .ig-btn {
     background-color: #bb86fc;
-    color: #000000 !important; /* Tulisan hitam tegas */
+    color: #000000 !important;
     padding: 12px 30px;
     border-radius: 30px;
     text-decoration: none;
@@ -304,22 +302,18 @@ body {
     transition: 0.3s ease;
 }
 
-/* Keadaan Pas Disentuh: Tombol Putih, Tulisan Ungu */
 .ig-btn:hover {
-    background-color: #ffffff; /* Tombol jadi putih */
-    color: #bb86fc !important; /* KUNCI: Tulisan ganti jadi ungu biar kelihatan! */
-    box-shadow: 0 0 20px #bb86fc; /* Efek neon makin silau */
-    transform: translateY(-3px); /* Efek naik dikit biar responsif */
+    background-color: #ffffff;
+    color: #bb86fc !important;
+    box-shadow: 0 0 20px #bb86fc;
+    transform: translateY(-3px);
 }
+
 @keyframes zoomIn {
     from { transform: scale(0.5); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
 
-/* --- KHUSUS TAMPILAN HP (RESPONSIF) --- */
-/* --- TAMPILAN LAPTOP (DEFAULT) --- */
-/* --- TAMPILAN LAPTOP --- */
-/* --- RESET NAVBAR BIAR GAK TABRAKAN --- */
 /* --- PENGATURAN NAVBAR GLOBAL --- */
 .navbar-global {
     position: fixed;
@@ -334,42 +328,29 @@ body {
 
 .logo-wrapper { display: flex; align-items: center; gap: 10px; cursor: pointer; }
 
-/* UKURAN STANDAR (LAPTOP) */
-.nav-logo-img { width: 50px; 
-    height: auto; }
-.logo-text { margin: 0; font-size: 24px; 
-    color: white; font-weight: bold; }
-.logo-text span { color: #bb86fc; 
-    text-shadow: 0 0 10px #bb86fc; }
+.nav-logo-img { width: 50px; height: auto; }
+.logo-text { margin: 0; font-size: 24px; color: white; font-weight: bold; }
+.logo-text span { color: #bb86fc; text-shadow: 0 0 10px #bb86fc; }
 
 .nav-links { display: flex; list-style: none; gap: 25px; margin: 0; padding: 0; }
 .nav-links a { color: white; text-decoration: none; font-weight: bold; font-size: 16px; }
 
-/* --- KHUSUS TAMPILAN HP (BIAR GAK BERANTAKAN) --- */
+/* --- KHUSUS TAMPILAN HP --- */
+@media (max-width: 768px) {
+    .navbar-global { padding: 8px 4%; }
+    .nav-logo-img { width: 32px !important; }
+    .logo-text { font-size: 16px !important; }
+    .nav-links { gap: 12px !important; }
+    .nav-links a { font-size: 12px !important; }
 
-    @media (max-width: 480px) {
-    .navbar-global { 
-        padding: 8px 4%; }
-    .nav-logo-img { 
-        width: 32px !important;} 
-    .logo-text { 
-        font-size: 16px!important; } 
-    .nav-links { 
-        gap: 12px !important;}
-    .nav-links a { 
-        font-size: 12px !important} 
-.hero h1 {
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    text-shadow: 0 0 15px rgba(255,255,255,0.5);
-}
-.hero p {
-    font-size: 1rem;
-    margin-bottom: 30px;
-    max-width: 600px;
-}
-    .playlist-section { width: 95% !important; 
+    .hero h1 { font-size: 2.2rem !important; }
+    .hero p { font-size: 1rem !important; }
+
+    .sos-icon { font-size: 1.5rem !important; }
+    .sosmed-container { gap: 20px !important; }
+
+    .playlist-section { 
+        width: 95% !important; 
         padding: 15px !important; 
         margin: 20px auto !important; 
     }
@@ -380,42 +361,39 @@ body {
         padding: 10px !important;
     }
 }
-    .navbar-global { padding: 10px 3%; }
 
-    marquee {
-        font-size: 12px;
-    }
+marquee {
+    font-size: 12px;
+}
 
-footer{
-    padding: 20px 0; /* Kasih jarak atas bawah 20px */
-    margin-top: 30px; /* Kasih jarak dari konten di atasnya */
-    border-top: 1px solid #bb86fc; /* Garis ungu tipis biar elegan */
+footer {
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 1px solid #bb86fc;
     text-align: center;
 }
+
 .footer i {
-    margin-left: 10px; /* Kasih jarak antara teks dan ikon sidik jari */
+    margin-left: 10px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .footer i:hover {
-    color: #bb86fc; /* Biar kalau disentuh warnanya berubah */
+    color: #bb86fc;
     transform: scale(1.2);
 }
 
-/* Jurus biar scroll halus pas klik Koleksi */
 html {
     scroll-behavior: smooth;
 }
 
-/* Biar navigasi gak ketutup bayangan gaib */
 nav a {
     position: relative;
     z-index: 10001;
     pointer-events: auto !important;
 }
 
-/* SESUDAH */
 nav {
     position: fixed !important;
     top: 0 !important;
@@ -423,12 +401,6 @@ nav {
     border-bottom: none !important;
     border: none !important;
     box-shadow: none !important;
-}
-nav.scrolled {
-    background: rgba(0, 0, 0, 0.85) !important;
-    backdrop-filter: blur(10px);
-}
-nav {
     transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 
