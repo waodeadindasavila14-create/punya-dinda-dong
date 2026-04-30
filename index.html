@@ -12,9 +12,9 @@
 <nav class="navbar-global">
     <div class="logo-wrapper" onclick="openLogoPreview()">
         <img src="LOGO_GIO.png" alt="Logo" class="nav-logo-img">
-        <h1 class="logo-text">
+        <p class="logo-text">
             GIO.<span>GEVAGAR</span>
-        </h1>
+        </p>
     </div>
 
     <ul class="nav-links">
@@ -39,8 +39,7 @@
         </div>
 
         <button class="main-btn" onclick="mulaiKenalan()">Ayo Kenalan!</button>
-</div>
-
+    </div>
 </section>
 
 <section id="main-content">
@@ -52,11 +51,10 @@
         </div>
     </div>
 
-    <div id="normal" class="tab-content" style="display: block;"> <div class="gallery-grid"></div>
+    <div id="normal" class="tab-content" style="display: block;">
         <div class="gallery-grid">
             <img src="img/normal.jpg.png"> 
-            <img src="img/normal1.jpg.png">
-            <img src="img/normal2.jpg.jpeg"> 
+            <img src="img/normal1.jpg.png"> 
             <img src="img/normal4.jpg.jpeg"> 
             <img src="img/normal5.jpg.png">
             <img src="img/kak_gio.jpeg">
@@ -114,6 +112,7 @@
             <img src="img/anomaliTIKUS.png">
             <img src="img/gio20 - Salin.png">
             <img src="img/setan.png">
+            <img src="img/GIO.POU.png">
         </div>
     </div>
 </section>
@@ -133,8 +132,8 @@ width: 90%;">
     style="background: #5d4037; 
     color: white; border: none; 
     padding: 12px 25px; 
-    border-radius: 10px; cursor: 
-    pointer; width: 220px; 
+    border-radius: 10px; cursor: pointer; 
+    width: 220px; 
     font-weight: bold;">
         Everything Goes On 🎶
     </button>
@@ -173,61 +172,54 @@ width: 90%;">
         
         <h3 style="color: #bb86fc; margin-top: 10px; margin-bottom: 5px;">Adinda Savila</h3>
         <p style="font-size: 14px; color: #ccc; margin-bottom: 20px;">Program Studi: Sistem dan Teknologi Informasi</p>
-        
         <a href="https://www.instagram.com/wa_ode_adinda_savila" target="_blank" class="ig-btn">
-    <i class="fab fa-instagram"></i> Baku pukul sini
-</a>
-    </div> </div>
+            <i class="fab fa-instagram"></i> Baku pukul sini
+        </a>
+    </div>
+</div>
 
-    <div id="logoModal" class="modal">
+<div id="logoModal" class="modal">
     <div class="modal-content">
         <span class="close-modal" onclick="closeLogoPreview()">&times;</span>
         <img src="LOGO_GIO.png" alt="Logo" style="width: 200px; margin-top:20px;">
         <h3 style="color:#bb86fc;">GIO GEVAGAR</h3>
-        <p style="color:#ccc;">Strings, Voice, and a Little Anomaly ✨</p>
+        <p style="color:#ccc;">"wanna hear something amazing? Liat-liat sampai selesai ya?"✨</p>
     </div>
 </div>
 
 <audio id="voiceWelcome" src="giogev.mp4"></audio>
 
 <script>
-// AMBIL ELEMEN
 const modalCreator = document.getElementById("creatorModal");
 const player = document.getElementById('youtube-player');
 const statusText = document.getElementById('status');
 
-// FUNGSI MODAL (Logo & Sidik Jari)
 function openLogoPreview() {
     const modal = document.getElementById("logoModal");
     const audio = document.getElementById("voiceWelcome");
-    if (modal) {
-        modal.style.display = "flex"; 
-    }
+    if (modal) { modal.style.display = "flex"; }
     if (audio) {
         audio.currentTime = 0;
         audio.volume = 0.6;
         audio.play().catch(() => {});
     }
-}// Reset dulu biar animasi bisa jalan lagi
+}
 
 function closeLogoPreview() { 
     const modal = document.getElementById("logoModal");
     const audio = document.getElementById("voiceWelcome");
-    if (modal) {
-        modal.style.display = "none"; 
-    }
-    if (audio) {
-        audio.pause();
-        audio.currentTime = 0;
-    }
+    if (modal) { modal.style.display = "none"; }
+    if (audio) { audio.pause(); audio.currentTime = 0; }
 }
+
 function openCreatorModal() {
     if(modalCreator) modalCreator.style.display = "flex";
 }
+
 function closeCreatorModal() { 
     if(modalCreator) modalCreator.style.display = "none";
 }
-// FUNGSI MUSIK
+
 function playSong(videoId, title) {
     if(player) {
         player.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
@@ -235,6 +227,7 @@ function playSong(videoId, title) {
         if(statusText) statusText.style.color = "#bb86fc";
     }
 }
+
 function stopMusic() {
     if(player) {
         player.src = "";
@@ -243,49 +236,41 @@ function stopMusic() {
     }
 }
 
-// FUNGSI TAB GALERI (Fix Tombol Tab)
 function bukaTab(nama) {
-    // 1. Sembunyikan SEMUA konten galeri secara paksa
     const tabs = document.querySelectorAll('.tab-content');
     tabs.forEach(tab => {
         tab.style.display = 'none';
-        tab.classList.remove('active'); // Biar aman kalau ada CSS active
+        tab.classList.remove('active');
     });
 
-    // 2. Matikan warna ungu di SEMUA tombol
     const buttons = document.querySelectorAll('.tab-btn');
-    buttons.forEach(btn => {
-        btn.classList.remove('active');
-    });
+    buttons.forEach(btn => { btn.classList.remove('active'); });
 
-    // 3. MUNCULKAN konten yang dipilih
     const targetTab = document.getElementById(nama);
     if (targetTab) {
         targetTab.style.display = 'block';
         targetTab.classList.add('active');
     }
 
-    // 4. NYALAKAN warna ungu di tombol yang diklik
     const targetBtn = document.getElementById('btn-' + nama);
-    if (targetBtn) {
-        targetBtn.classList.add('active');
-    }
+    if (targetBtn) { targetBtn.classList.add('active'); }
 }
 
-// FUNGSI .IGASI
 function mulaiKenalan() { 
     const mainContent = document.getElementById('main-content');
     if(mainContent) mainContent.scrollIntoView({ behavior: 'smooth' }); 
 }
+
 function kembaliHome() { 
     window.scrollTo({ top: 0, behavior: 'smooth' }); 
 }
 
-// KLIK LUAR UNTUK TUTUP MODAL
 window.onclick = function(event) {
     if (event.target == modalCreator) closeCreatorModal();
+    const modalLogo = document.getElementById("logoModal");
     if (event.target == modalLogo) closeLogoPreview();
 }
+
 window.addEventListener('scroll', function() {
     const nav = document.querySelector('nav');
     if (window.scrollY > 10) {
